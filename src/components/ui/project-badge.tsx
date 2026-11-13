@@ -1,10 +1,11 @@
 import { cn } from "@/lib/utils"
 
-export type ProjectKind = "open-source" | "team"
+export type ProjectKind = "open-source" | "team" | "collection"
 
 const kinds: Record<ProjectKind, { label: string; dot: string }> = {
   "open-source": { label: "Open source", dot: "bg-emerald-400" },
   team: { label: "Team project", dot: "bg-sky-400" },
+  collection: { label: "Collection", dot: "bg-violet-400" },
 }
 
 /** Glass pill marking what kind of project this is; sits over a project image. */

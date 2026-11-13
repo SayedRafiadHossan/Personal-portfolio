@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 
+import { useSmartLinkProps } from "@/components/animation/page-transition"
 import { ProjectBadge } from "@/components/ui/project-badge"
 import { featuredWorks, profile } from "@/data/data"
 
@@ -14,6 +15,7 @@ type FeaturedWorksMobileProps = Readonly<{
 }>
 
 export const FeaturedWorksMobile = ({ stars }: FeaturedWorksMobileProps) => {
+  const linkProps = useSmartLinkProps()
   return (
     <section className="py-20 md:hidden">
       <div className="main-container">
@@ -47,9 +49,7 @@ export const FeaturedWorksMobile = ({ stars }: FeaturedWorksMobileProps) => {
             <RevealAnimation delay={0.1 + index * 0.1} key={work.title}>
               <div className="space-y-6">
                 <a
-                  href={work.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...linkProps(work.href)}
                   tabIndex={-1}
                   aria-hidden
                   className="relative block aspect-670/460 overflow-hidden rounded-2xl ring-1 ring-background-1/10"
@@ -90,13 +90,11 @@ export const FeaturedWorksMobile = ({ stars }: FeaturedWorksMobileProps) => {
                       ))}
                     </ul>
                     <a
-                      href={work.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      {...linkProps(work.href)}
                       className="inline-flex min-h-11 items-center gap-1.5 font-aspekta-550 text-tagline-2 text-background-1 underline decoration-background-1/25 underline-offset-[0.25em]"
                     >
-                      Visit project
-                      <span aria-hidden>↗</span>
+                      {work.href.startsWith("/") ? "View all" : "Visit project"}
+                      <span aria-hidden>{work.href.startsWith("/") ? "→" : "↗"}</span>
                     </a>
                   </div>
                 </div>

@@ -141,3 +141,33 @@ export const TransitionLink = ({
 
   return <Link href={href} onClick={handleClick} {...props} />
 }
+
+const isExternal = (href: string) => /^https?:\/\//.test(href)
+
+/**
+ * Props for a plain <a> that may point inside or outside the site: external links
+ * open in a new tab, internal ones route through the page transition. For anchors
+ * that can't be a TransitionLink (e.g. ones GSAP animates through a ref).
+ */
+export const useSmartLinkProps = () => {
+  const navigate = usePageTransition()
+  return (href: string) =>
+    isExternal(href)
+      ? { href, target: "_blank", rel: "noopener noreferrer" }
+      : {
+          href,
+          onClick: (event: MouseEvent<HTMLAnchorElement>) => {
+            if (
+              event.button !== 0 ||
+              event.metaKey ||
+              event.ctrlKey ||
+              event.shiftKey ||
+              event.altKey
+            ) {
+              return
+            }
+            event.preventDefault()
+            navigate(href)
+          },
+        }
+}

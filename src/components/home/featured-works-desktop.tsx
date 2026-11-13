@@ -13,6 +13,7 @@ import {
   type PointerEvent,
 } from "react"
 
+import { useSmartLinkProps } from "@/components/animation/page-transition"
 import {
   usePreloaderOpened,
   usePreloaderReady,
@@ -91,6 +92,7 @@ type FeaturedWorksDesktopProps = Readonly<{
 export const FeaturedWorksDesktop = ({ stars }: FeaturedWorksDesktopProps) => {
   const ready = usePreloaderReady()
   const opened = usePreloaderOpened()
+  const linkProps = useSmartLinkProps()
   const lenis = useLenis()
   const [active, setActive] = useState(0)
   const compact = useCompact()
@@ -382,9 +384,7 @@ export const FeaturedWorksDesktop = ({ stars }: FeaturedWorksDesktopProps) => {
             ref={(el) => {
               cardRefs.current[i] = el
             }}
-            href={work.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...linkProps(work.href)}
             data-card
             aria-label={`Explore ${work.title}`}
             onFocus={() => scrollToStep(i)}

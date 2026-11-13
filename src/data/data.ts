@@ -200,15 +200,16 @@ export const featuredWorks: FeaturedWork[] = [
     stack: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "Project Three",
+    title: "Framer Templates",
     description:
-      "A one- or two-sentence pitch: what the project is and who it's for.",
-    href: "#",
-    image: "/images/project-3.jpg",
-    imageAlt: "Project Three",
-    kind: "team",
-    role: "What you did on it.",
-    stack: ["Next.js", "Tailwind CSS"],
+      "A collection of premium website templates for studios, startups and service businesses, sold on Pixels71.",
+    // Opens the in-site page listing every template (see `templates` below).
+    href: "/templates",
+    image: "/images/templates/framer-templates.jpg",
+    imageAlt: "Framer Templates",
+    kind: "collection",
+    role: "Built the templates, published on Pixels71.",
+    stack: ["Framer", "Next.js", "CMS"],
   },
   {
     title: "Project Four",
@@ -231,5 +232,89 @@ export const featuredWorks: FeaturedWork[] = [
     kind: "team",
     role: "What you did on it.",
     stack: ["Vite", "Tailwind CSS", "GSAP"],
+  },
+]
+
+export type Template = {
+  title: string
+  /** Short category, shown as a tag. */
+  category: string
+  description: string
+  href: string
+  image: string
+  /** What it's built with. */
+  platform: "Framer" | "Next.js"
+}
+
+/** Website templates shown on the /templates page. */
+export const templates: Template[] = [
+  {
+    title: "Qevron",
+    category: "Architecture studio",
+    description:
+      "For architecture and interior design studios, with a floor plan that draws itself on scroll, WebGL project cards and a map view of the work.",
+    href: "https://www.pixels71.com/templates/qevron-architecture-studio-next-js-template",
+    image: "/images/templates/qevron.jpg",
+    platform: "Next.js",
+  },
+  {
+    title: "Countly",
+    category: "Finance & accounting",
+    description: "A corporate site for finance and accounting firms.",
+    href: "https://www.pixels71.com/templates/countly-finance-accounting-template",
+    image: "/images/templates/countly.jpg",
+    platform: "Framer",
+  },
+  {
+    title: "Optivio",
+    category: "SEO & analytics",
+    description:
+      "A six-page marketing site for an SEO or analytics product, with a clinical, diagnostic tone, a filterable CMS blog and custom interactive sections.",
+    href: "https://www.pixels71.com/templates/optivio",
+    image: "/images/templates/optivio.jpg",
+    platform: "Framer",
+  },
+  {
+    title: "PRISMA",
+    category: "Designer portfolio",
+    description: "A portfolio for brand designers.",
+    href: "https://www.pixels71.com/templates/prisma",
+    image: "/images/templates/prisma.jpg",
+    platform: "Framer",
+  },
+  {
+    title: "Cavero",
+    category: "Real estate",
+    description:
+      "For agencies, brokers and property teams: ivory and charcoal with copper accents, CMS listings, working filters, team profiles and a journal.",
+    href: "https://www.pixels71.com/templates/cavero-real-estate-agency-framer-template",
+    image: "/images/templates/cavero.jpg",
+    platform: "Framer",
+  },
+  {
+    title: "FintechNova",
+    category: "Fintech SaaS",
+    description:
+      "For fintech startups, finance SaaS platforms and payment companies, with clean layouts for features, pricing and integrations.",
+    href: "https://www.pixels71.com/templates/fintechnova-fintech-finance-saas",
+    image: "/images/templates/fintechnova.jpg",
+    platform: "Framer",
+  },
+  {
+    title: "Ignivo",
+    category: "AI automation",
+    description:
+      "For AI automation tools, autonomous agents and SaaS startups.",
+    href: "https://www.pixels71.com/templates/ignivo-ai-automation-saas",
+    image: "/images/templates/ignivo.jpg",
+    platform: "Framer",
+  },
+  {
+    title: "Eventra Studio",
+    category: "Weddings & events",
+    description: "A timeless website for wedding planners and venues.",
+    href: "https://www.pixels71.com/templates/eventra-studio",
+    image: "/images/templates/eventra.jpg",
+    platform: "Framer",
   },
 ]
