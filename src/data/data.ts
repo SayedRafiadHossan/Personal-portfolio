@@ -181,7 +181,7 @@ export const featuredWorks: FeaturedWork[] = [
     title: "NextSaaS",
     description:
       "A WordPress theme for SaaS, software and startup websites, sold on ThemeForest.",
-    href: "https://themeforest.net/item/nextsaas-saas-software-startup-wordpress-theme/61429174",
+    href: "https://preview.themeforest.net/item/nextsaas-saas-software-startup-wordpress-theme/full_screen_preview/61429174",
     image: "/images/nextsaas.jpg",
     imageAlt: "NextSaaS",
     kind: "team",
@@ -192,7 +192,7 @@ export const featuredWorks: FeaturedWork[] = [
     title: "Solyd",
     description:
       "An HTML template for solar energy and greentech businesses, sold on ThemeForest.",
-    href: "https://themeforest.net/item/solyd-solar-energy-greentech-html-template/64409190",
+    href: "https://preview.themeforest.net/item/solyd-solar-energy-greentech-html-template/full_screen_preview/64409190",
     image: "/images/solyd.jpg",
     imageAlt: "Solyd",
     kind: "team",
