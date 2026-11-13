@@ -189,15 +189,15 @@ export const featuredWorks: FeaturedWork[] = [
     stack: ["WordPress", "PHP", "JavaScript"],
   },
   {
-    title: "Project Two",
+    title: "Solyd",
     description:
-      "A one- or two-sentence pitch: what the project is and who it's for.",
-    href: "#",
-    image: "/images/project-2.jpg",
-    imageAlt: "Project Two",
-    kind: "open-source",
-    role: "What you did on it.",
-    stack: ["Vue.js", "Tailwind CSS"],
+      "An HTML template for solar energy and greentech businesses, sold on ThemeForest.",
+    href: "https://themeforest.net/item/solyd-solar-energy-greentech-html-template/64409190",
+    image: "/images/solyd.jpg",
+    imageAlt: "Solyd",
+    kind: "team",
+    role: "Built with the team at StaticMania.",
+    stack: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "Project Three",
