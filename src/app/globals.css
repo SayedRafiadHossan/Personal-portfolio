@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "../style/variable.css";
+@import "../style/typography.css";
+@import "../style/common.css";

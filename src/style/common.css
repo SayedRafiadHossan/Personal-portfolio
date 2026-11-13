@@ -1,0 +1,75 @@
+body {
+  background-color: var(--color-background-2);
+  color: var(--color-background-1);
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body[data-nav-status="open"] {
+  overflow: hidden;
+}
+
+html:has([data-not-found-page]),
+body:has([data-not-found-page]) {
+  overflow: hidden;
+  background-color: #fff;
+}
+
+body:has([data-not-found-page]) footer {
+  display: none;
+}
+
+* {
+  @apply box-border;
+}
+
+[data-text-reveal] {
+  opacity: 0;
+}
+
+/* Off-screen sections stop their endless CSS animations (set by an IntersectionObserver) */
+[data-offscreen] * {
+  animation-play-state: paused !important;
+}
+
+.text-reveal-line,
+.text-reveal-line-mask {
+  display: block;
+  position: relative;
+}
+
+@utility main-container {
+  @apply mx-auto max-w-[1290px] px-5 lp:px-0;
+}
+
+/* ==========PAGE TRANSITION========== */
+/* Incoming page expands from a window over the dimmed outgoing page. */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: page-dim 0.8s cubic-bezier(0.5, 0.2, 0, 1) both;
+  }
+
+  ::view-transition-new(root) {
+    animation: page-reveal 0.8s cubic-bezier(0.5, 0.2, 0, 1) both;
+  }
+
+  ::view-transition-group(site-header) {
+    animation: none;
+  }
+}
+
+@keyframes page-reveal {
+  from {
+    clip-path: inset(50% 30% 15% 29%);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes page-dim {
+  to {
+    filter: brightness(0.4);
+  }
+}

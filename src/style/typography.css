@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "Aspekta Variable";
+  font-weight: 100 1000;
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/aspekta/AspektaVF.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 50;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-50.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-100.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 150;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-150.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-200.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 250;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-250.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 350;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-350.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-450.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 550;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-550.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 650;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-650.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 750;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-750.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-800.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 850;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-850.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 950;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-950.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 1000;
+  font-display: swap;
+  src: url("/fonts/aspekta/Aspekta-1000.woff2") format("woff2");
+}
+
+@utility font-aspekta-100 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-100);
+}
+
+@utility font-aspekta-150 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-150);
+}
+
+@utility font-aspekta-200 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-200);
+}
+
+@utility font-aspekta-250 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-250);
+}
+
+@utility font-aspekta-300 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-300);
+}
+
+@utility font-aspekta-350 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-350);
+}
+
+@utility font-aspekta-400 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-400);
+}
+
+@utility font-aspekta-450 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-450);
+}
+
+@utility font-aspekta-500 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-500);
+}
+
+@utility font-aspekta-550 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-550);
+}
+
+@utility font-aspekta-600 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-600);
+}
+
+@utility font-aspekta-650 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-650);
+}
+
+@utility font-aspekta-700 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-700);
+}
+
+@utility font-aspekta-750 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-750);
+}
+
+@utility font-aspekta-800 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-800);
+}
+
+@utility font-aspekta-850 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-850);
+}
+
+@utility font-aspekta-900 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-900);
+}
+
+@utility font-aspekta-950 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-950);
+}
+
+@utility font-aspekta-1000 {
+  font-family: var(--font-aspekta);
+  font-weight: var(--font-weight-aspekta-1000);
+}
+
+@utility text-aspekta-heading-1 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-2 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-3 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-4 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-5 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-6 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-7 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-8 {
+  @apply font-aspekta;
+}
+
+@utility text-aspekta-heading-9 {
+  @apply font-aspekta;
+}
+
+@utility text-manrope-heading-1 {
+  @apply font-manrope;
+}
+
+@utility text-manrope-heading-2 {
+  @apply font-manrope;
+}
+
+@utility text-manrope-heading-3 {
+  @apply font-manrope;
+}
+
+@utility text-manrope-heading-4 {
+  @apply font-manrope;
+}
+
+@utility text-manrope-heading-5 {
+  @apply font-manrope;
+}
+
+@utility text-manrope-heading-6 {
+  @apply font-manrope;
+}
+
+@utility text-it-heading-1 {
+  @apply font-inter-tight;
+}
+
+@utility text-it-heading-2 {
+  @apply font-inter-tight;
+}
+
+@utility text-it-heading-3 {
+  @apply font-inter-tight;
+}
+
+@utility text-it-heading-4 {
+  @apply font-inter-tight;
+}
+
+@utility text-it-heading-5 {
+  @apply font-inter-tight;
+}
+
+@utility text-it-heading-6 {
+  @apply font-inter-tight;
+}
+
+@utility text-instrument-heading-1 {
+  @apply font-instrument-serif;
+}
+
+@utility text-instrument-heading-2 {
+  @apply font-instrument-serif;
+}
+
+@utility text-instrument-heading-3 {
+  @apply font-instrument-serif;
+}
+
+@utility text-instrument-heading-4 {
+  @apply font-instrument-serif;
+}
+
+@utility text-instrument-heading-5 {
+  @apply font-instrument-serif;
+}
+
+@utility text-instrument-heading-6 {
+  @apply font-instrument-serif;
+}
+
+@utility text-tagline-1 {
+  @apply font-inter-tight;
+}
+
+@utility text-tagline-2 {
+  @apply font-inter-tight;
+}
+
+@utility text-tagline-3 {
+  @apply font-inter-tight;
+}
+
+@utility text-tagline-4 {
+  @apply font-inter-tight;
+}
+
+@layer base {
+  p {
+    @apply font-inter-tight;
+  }
+}

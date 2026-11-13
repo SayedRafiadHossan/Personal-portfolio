@@ -1,0 +1,152 @@
+@theme {
+  /* fonts  */
+  --font-sans: "Aspekta", ui-sans-serif, system-ui, sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter-tight: "Inter Tight", sans-serif;
+  --font-instrument-serif: "Instrument Serif", serif;
+  --font-aspekta: "Aspekta", Arial, sans-serif;
+  --font-aspekta-variable: "Aspekta Variable", Arial, sans-serif;
+  /* --heading-1: #f0f0f0; */
+
+  /* background-colors  */
+  --color-background-1: #1a1a1a;
+  --color-background-2: #fcfcfc;
+
+  /* ASPEKTA FONT WEIGHTS (100–1000) → font-aspekta-100, font-aspekta-200, … */
+  --font-weight-aspekta-100: 100;
+  --font-weight-aspekta-150: 150;
+  --font-weight-aspekta-200: 200;
+  --font-weight-aspekta-250: 250;
+  --font-weight-aspekta-300: 300;
+  --font-weight-aspekta-350: 350;
+  --font-weight-aspekta-400: 400;
+  --font-weight-aspekta-450: 450;
+  --font-weight-aspekta-500: 500;
+  --font-weight-aspekta-550: 550;
+  --font-weight-aspekta-600: 600;
+  --font-weight-aspekta-650: 650;
+  --font-weight-aspekta-700: 700;
+  --font-weight-aspekta-750: 750;
+  --font-weight-aspekta-800: 800;
+  --font-weight-aspekta-850: 850;
+  --font-weight-aspekta-900: 900;
+  --font-weight-aspekta-950: 950;
+  --font-weight-aspekta-1000: 1000;
+
+  /* ASPEKTA FONT */
+  --text-aspekta-heading-1: 12.75rem; /* 204px */
+  --text-aspekta-heading-1--line-height: 12.75rem;
+  --text-aspekta-heading-1--letter-spacing: -0.04em;
+  --text-aspekta-heading-2: 9.5rem; /* 152px */
+  --text-aspekta-heading-2--line-height: 9.5rem;
+  --text-aspekta-heading-2--letter-spacing: -0.04em;
+  --text-aspekta-heading-3: 7rem; /* 112px */
+  --text-aspekta-heading-3--line-height: 7rem;
+  --text-aspekta-heading-3--letter-spacing: -0.04em;
+  --text-aspekta-heading-4: 5.25rem; /* 84px */
+  --text-aspekta-heading-4--line-height: 5.25rem;
+  --text-aspekta-heading-4--letter-spacing: -0.04em;
+  --text-aspekta-heading-5: 4rem; /* 64px */
+  --text-aspekta-heading-5--line-height: 4rem;
+  --text-aspekta-heading-5--letter-spacing: -0.04em;
+  --text-aspekta-heading-6: 3rem; /* 48px */
+  --text-aspekta-heading-6--line-height: 3rem;
+  --text-aspekta-heading-6--letter-spacing: -0.04em;
+  --text-aspekta-heading-7: 2.5rem; /* 40px */
+  --text-aspekta-heading-7--line-height: 2.5rem;
+  --text-aspekta-heading-7--letter-spacing: -0.04em;
+  --text-aspekta-heading-8: 2rem; /* 32px */
+  --text-aspekta-heading-8--line-height: 2rem;
+  --text-aspekta-heading-8--letter-spacing: -0.04em;
+  --text-aspekta-heading-9: 1.5rem; /* 24px */
+  --text-aspekta-heading-9--line-height: 1.5rem;
+  --text-aspekta-heading-9--letter-spacing: -0.04em;
+
+  /* MANROPE FONT */
+  --text-manrope-heading-1: 4rem; /* 64px */
+  --text-manrope-heading-1--line-height: 120%;
+  --text-manrope-heading-2: 3rem; /* 48px */
+  --text-manrope-heading-2--line-height: 120%;
+  --text-manrope-heading-3: 2.5rem; /* 40px */
+  --text-manrope-heading-3--line-height: 120%;
+  --text-manrope-heading-4: 2rem; /* 32px */
+  --text-manrope-heading-4--line-height: 130%;
+  --text-manrope-heading-5: 1.5rem; /* 24px */
+  --text-manrope-heading-5--line-height: 140%;
+  --text-manrope-heading-6: 1.25rem; /* 20px */
+  --text-manrope-heading-6--line-height: 140%;
+
+  /* INTER TIGHT FONT */
+  --text-it-heading-1: 3.5rem; /* 56px */
+  --text-it-heading-1--line-height: 120%;
+  --text-it-heading-2: 3rem; /* 48px */
+  --text-it-heading-2--line-height: 120%;
+  --text-it-heading-3: 2.5rem; /* 40px */
+  --text-it-heading-3--line-height: 120%;
+  --text-it-heading-4: 2rem; /* 32px */
+  --text-it-heading-4--line-height: 130%;
+  --text-it-heading-5: 1.5rem; /* 24px */
+  --text-it-heading-5--line-height: 140%;
+  --text-it-heading-6: 1.25rem; /* 20px */
+  --text-it-heading-6--line-height: 140%;
+
+  /* INSTRUMENT SERIF FONT */
+  --text-instrument-heading-1: 5.25rem; /* 84px */
+  --text-instrument-heading-1--line-height: 100%;
+  --text-instrument-heading-2: 4rem; /* 64px */
+  --text-instrument-heading-2--line-height: 110%;
+  --text-instrument-heading-3: 2.75rem; /* 44px */
+  --text-instrument-heading-3--line-height: 110%;
+  --text-instrument-heading-4: 2.25rem; /* 36px */
+  --text-instrument-heading-4--line-height: 120%;
+  --text-instrument-heading-5: 2rem; /* 32px */
+  --text-instrument-heading-5--line-height: 120%;
+  --text-instrument-heading-6: 1.5rem; /* 24px */
+  --text-instrument-heading-6--line-height: 120%;
+
+  /* TAGLINE FONT */
+  --text-tagline-1: 1.125rem; /* 18px */
+  --text-tagline-1--line-height: 150%;
+  --text-tagline-2: 1rem; /* 16px */
+  --text-tagline-2--line-height: 140%;
+  --text-tagline-3: 0.875rem; /* 14px */
+  --text-tagline-3--line-height: 150%;
+  --text-tagline-4: 0.75rem; /* 12px */
+  --text-tagline-4--line-height: 150%;
+
+  /* ==========BREAKPOINTS========== */
+  --breakpoint-lp: 1440px;
+
+  /* easing  */
+  --ease-bouncy: cubic-bezier(0.34, 1.42, 0.64, 1);
+  --ease-page: cubic-bezier(0.5, 0.2, 0, 1);
+
+  /* animations  */
+  --animate-marquee-x: marquee-x 22s linear infinite;
+  --animate-marquee-y: marquee-y 22s linear infinite;
+
+  @keyframes marquee-x {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-y {
+    to {
+      transform: translateY(-50%);
+    }
+  }
+
+  --animate-blink: blink 4.6s ease-in-out infinite;
+
+  @keyframes blink {
+    0%,
+    92%,
+    100% {
+      transform: scaleY(1);
+    }
+    95% {
+      transform: scaleY(0.1);
+    }
+  }
+}
