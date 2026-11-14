@@ -74,7 +74,7 @@ export const TemplatesPage = () => {
           className="invisible flex items-center gap-3 font-aspekta-500 text-tagline-3 tracking-[0.12em] text-background-1/50 uppercase"
         >
           <span aria-hidden className="h-px w-8 bg-current" />
-          Framer &amp; Next.js
+          Built in Framer
         </p>
         <h1
           data-intro
@@ -89,8 +89,8 @@ export const TemplatesPage = () => {
           data-intro
           className="invisible max-w-xl font-instrument-serif text-xl leading-snug text-background-1/60 md:text-2xl"
         >
-          Premium website templates for studios, startups and service
-          businesses, published on Pixels71.
+          Premium Framer templates for studios, startups and service
+          businesses.
         </p>
       </header>
 

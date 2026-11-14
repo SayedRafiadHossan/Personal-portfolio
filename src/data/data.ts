@@ -209,7 +209,7 @@ export const featuredWorks: FeaturedWork[] = [
     imageAlt: "Framer Templates",
     kind: "collection",
     role: "Built the templates, published on Pixels71.",
-    stack: ["Framer", "Next.js", "CMS"],
+    stack: ["Framer", "CMS", "Interactions"],
   },
   {
     title: "Eventera",
@@ -249,13 +249,22 @@ export type Template = {
 /** Website templates shown on the /templates page. */
 export const templates: Template[] = [
   {
-    title: "Qevron",
-    category: "Architecture studio",
+    title: "QEVRØN",
+    category: "Architecture & interiors",
     description:
-      "For architecture and interior design studios, with a floor plan that draws itself on scroll, WebGL project cards and a map view of the work.",
-    href: "https://www.pixels71.com/templates/qevron-architecture-studio-next-js-template",
+      "A refined template for architecture studios and interior designers to showcase their work.",
+    href: "https://www.pixels71.com/templates/qevr-n-architecture-interiors",
     image: "/images/templates/qevron.jpg",
-    platform: "Next.js",
+    platform: "Framer",
+  },
+  {
+    title: "Carbonyx",
+    category: "Climate data SaaS",
+    description:
+      "For climate-tech and carbon-accounting platforms: emissions, energy and climate-risk data presented as one live dashboard.",
+    href: "https://carbonyx.framer.website/",
+    image: "/images/templates/carbonyx.jpg",
+    platform: "Framer",
   },
   {
     title: "Countly",

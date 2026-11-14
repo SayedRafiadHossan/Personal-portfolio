@@ -4,7 +4,7 @@ import { DEFAULT_URL, generateMetadata } from "@/utils/metadata"
 
 export const metadata = generateMetadata(
   `Templates — ${profile.name}`,
-  `Premium Framer and Next.js website templates by ${profile.name}, published on Pixels71.`,
+  `Premium Framer website templates by ${profile.name}.`,
   new URL("/templates", DEFAULT_URL).toString(),
   "/images/templates/framer-templates.jpg"
 )
