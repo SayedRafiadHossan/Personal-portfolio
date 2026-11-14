@@ -14,12 +14,6 @@ export type SignatureProps = Readonly<{
   color?: string
   fontSize?: number
   duration?: number
-  /**
-   * Pen mode: write the whole text in this many seconds, like one continuous
-   * stroke — each letter drawn at a steady pace, flowing into the next, with the
-   * whole word easing in and out. Overrides `duration`'s per-letter timing.
-   */
-  writeIn?: number
   delay?: number
   className?: string
   onComplete?: () => void
@@ -32,7 +26,6 @@ export const Signature = ({
   color = "#000000",
   fontSize = 14,
   duration = 2,
-  writeIn,
   delay = 0,
   className,
   onComplete,
@@ -151,38 +144,18 @@ export const Signature = ({
           el.dataset.maskReady = "true"
         }
 
-        gsap.fromTo(
-          svg,
-          { opacity: 0.85 },
-          { opacity: 1, duration: 0.35, ease: "power2.out" }
-        )
-
-        if (writeIn) {
-          // Pen mode: letters drawn back to back at a linear pace (slight overlap so
-          // the pen never stops), then the whole run is played through one ease.
-          const step = 1
-          const pen = gsap.timeline({ paused: true })
-          pen.to(maskStrokes, {
-            drawSVG: "100%",
-            duration: step,
-            ease: "none",
-            stagger: step * 0.55,
-          })
-          gsap.to(pen, {
-            progress: 1,
-            duration: writeIn,
-            delay,
-            ease: "power1.inOut",
-            onUpdate: () => onTick.current?.(pen.progress()),
-            onComplete: () => onDone.current?.(),
-          })
-          return
-        }
-
         const tl = gsap.timeline({
           onUpdate: () => onTick.current?.(tl.progress()),
           onComplete: () => onDone.current?.(),
         })
+
+        tl.fromTo(
+          svg,
+          { opacity: 0.85 },
+          { opacity: 1, duration: 0.35, ease: "power2.out" },
+          0
+        )
+
         tl.to(
           maskStrokes,
           {
@@ -203,7 +176,7 @@ export const Signature = ({
     },
     {
       scope: rootRef,
-      dependencies: [paths, duration, writeIn, delay],
+      dependencies: [paths, duration, delay],
       revertOnUpdate: true,
     }
   )

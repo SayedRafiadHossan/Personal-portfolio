@@ -12,10 +12,8 @@ type PreloaderSignatureProps = Readonly<{
 
 const SHARED = {
   color: "#ffffff",
+  duration: 1,
 } as const
-
-/** Seconds to write the whole name (pen mode), part of the < 3s intro budget. */
-const WRITE_IN = 1.3
 
 // Phones split the name over two lines: everything but the surname, then the surname.
 const nameParts = profile.name.split(" ")
@@ -44,15 +42,13 @@ export const PreloaderSignature = ({
         <Signature
           {...SHARED}
           className="max-w-[86vw]"
-          writeIn={WRITE_IN * 0.6}
           fontSize={28}
           text={FIRST_LINE}
         />
         <Signature
           {...SHARED}
           className="max-w-[86vw]"
-          writeIn={WRITE_IN * 0.45}
-          delay={WRITE_IN * 0.55}
+          delay={1}
           fontSize={28}
           text={LAST_LINE}
           onComplete={onComplete}
@@ -66,7 +62,6 @@ export const PreloaderSignature = ({
     <Signature
       {...SHARED}
       className="max-w-[88vw] origin-center scale-90 md:scale-100"
-      writeIn={WRITE_IN}
       fontSize={38}
       text={`${profile.name}.`}
       onComplete={onComplete}
