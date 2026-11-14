@@ -212,6 +212,17 @@ export const featuredWorks: FeaturedWork[] = [
     stack: ["Framer", "Next.js", "CMS"],
   },
   {
+    title: "Eventera",
+    description:
+      "A WordPress theme for conferences, summits and events, sold on ThemeForest.",
+    href: "https://preview.themeforest.net/item/eventera-conference-wordpress-theme/full_screen_preview/63340460",
+    image: "/images/eventera.jpg",
+    imageAlt: "Eventera",
+    kind: "team",
+    role: "Built with the team at StaticMania.",
+    stack: ["WordPress", "PHP", "JavaScript"],
+  },
+  {
     title: "Rivor",
     description:
       "A multipurpose creative WordPress theme for agencies, studios and portfolios, sold on ThemeForest.",
@@ -221,17 +232,6 @@ export const featuredWorks: FeaturedWork[] = [
     kind: "team",
     role: "Built with the team at StaticMania.",
     stack: ["WordPress", "PHP", "JavaScript"],
-  },
-  {
-    title: "Project Five",
-    description:
-      "A one- or two-sentence pitch: what the project is and who it's for.",
-    href: "#",
-    image: "/images/project-5.jpg",
-    imageAlt: "Project Five",
-    kind: "team",
-    role: "What you did on it.",
-    stack: ["Vite", "Tailwind CSS", "GSAP"],
   },
 ]
 
