@@ -12,8 +12,11 @@ import { cn } from "@/lib/utils"
 
 gsap.registerPlugin(useGSAP, CustomEase, ScrollTrigger)
 
-/** Playback speed of the exit (line rises, signature sinks, page opens). 1 = original. */
-const OUTRO_SPEED = 1.7
+/**
+ * Playback speed of the exit (line rises, signature sinks, page opens). 1 = original.
+ * With the 1.3s signature this keeps load → hero reveal under 3 seconds.
+ */
+const OUTRO_SPEED = 2.4
 
 const ease = {
   out: CustomEase.create("llf-out", "0.22,1,0.36,1"),
@@ -243,8 +246,8 @@ export const Preloader = ({ children }: PreloaderProps) => {
         .call(() => performance.mark("preloader:open"), undefined, "open")
         .to(dot, { scale: 0, autoAlpha: 0, duration: 0.2, ease: "power2.in" }, "open")
         .to(hole, { r: 1, duration: 1.2, ease: ease.expo, onUpdate: cut }, "open")
-        // The hole is all but open by now: the hero starts revealing itself piece by piece.
-        .call(markOpened, undefined, "open+=0.7")
+        // The hero starts revealing itself piece by piece as the circle sweeps open.
+        .call(markOpened, undefined, "open+=0.2")
         // The dim lifts quickly so the circle shows the page, not a grey patch
         .to(dim, { autoAlpha: 0, duration: 0.6, ease: "power2.out" }, "open")
         .to(
@@ -283,14 +286,14 @@ export const Preloader = ({ children }: PreloaderProps) => {
             exit()
           })
         })
-      }, 60)
+      }, 30)
     }
 
     Promise.all([signature.promise, assetsReady()]).then(() => {
       if (cancelled) return
       complete = gsap.to(progress, {
         value: 100,
-        duration: 0.25,
+        duration: 0.15,
         ease: "power2.out",
         overwrite: true,
         onUpdate: render,
