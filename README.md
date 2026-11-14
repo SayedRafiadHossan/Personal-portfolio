@@ -27,8 +27,9 @@ Images go in `public/images`.
 
 ## Contact form
 
-The contact form sends email through EmailJS and checks submissions with reCAPTCHA.
-Add these to a `.env.local` file (it is git-ignored):
+The contact form sends email through EmailJS. The EmailJS IDs are set as defaults in
+`src/lib/emailjs/config.ts` (they are public by design), so no setup is needed to deploy.
+To use different ones, set these in `.env.local` or your host's environment settings:
 
 ```
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=

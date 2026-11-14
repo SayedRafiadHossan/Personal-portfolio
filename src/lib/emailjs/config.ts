@@ -12,14 +12,26 @@ export type EmailJsConfig = {
   publicKey: string
 }
 
+/**
+ * The contact form's EmailJS IDs. EmailJS designs these to be public: they ship
+ * in the browser bundle either way. Set the NEXT_PUBLIC_EMAILJS_* env vars to
+ * override them. To stop other sites using them, add your domain to the
+ * allowlist in EmailJS (Account → Security).
+ */
+const DEFAULTS = {
+  serviceId: "service_in46g58",
+  templateId: "template_ut4iqvs",
+  publicKey: "yy7Z6iZ34BLUF7_Ys",
+}
+
 export function getEmailJsConfig(): EmailJsConfig {
   const result = emailJsEnvSchema.safeParse({
     NEXT_PUBLIC_EMAILJS_SERVICE_ID:
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || DEFAULTS.serviceId,
     NEXT_PUBLIC_EMAILJS_TEMPLATE_ID:
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || DEFAULTS.templateId,
     NEXT_PUBLIC_EMAILJS_PUBLIC_KEY:
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || DEFAULTS.publicKey,
   })
 
   if (!result.success) {
