@@ -73,7 +73,7 @@ export const aboutSlides: AboutSlide[] = [
   {
     title: "Experience",
     description:
-      "Marketing websites, Framer templates and WordPress sites, from layout to launch.",
+      "From data analytics to building marketing websites, Framer templates and WordPress sites.",
     experience: [
       {
         label: "Present",
@@ -88,14 +88,9 @@ export const aboutSlides: AboutSlide[] = [
         ],
       },
       {
-        label: "Present",
-        title: "Pixels71",
-        href: "https://pixels71.com/",
-        description: "Framer template creator",
-        current: true,
-        points: [
-          "Framer templates with motion built in. Optivio, Orveli and QEVRØN trended on the Framer Marketplace.",
-        ],
+        label: "Feb 2024 to May 2025",
+        title: "IMML",
+        description: "Data Analyst",
       },
     ],
     image: "/images/experience.svg",
