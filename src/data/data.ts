@@ -29,8 +29,8 @@ export const profile = {
     href: string
     preview?: string
   },
-  /** placeholder — your deployed site URL */
-  siteUrl: "https://yourdomain.com/",
+  /** Your deployed site URL. */
+  siteUrl: "https://sayedrafiadhossan.vercel.app/",
   github: {
     handle: "github.com/SayedRafiadHossan",
     href: "https://github.com/SayedRafiadHossan",
