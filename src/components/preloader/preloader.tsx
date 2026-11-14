@@ -122,10 +122,7 @@ export const Preloader = ({ children }: PreloaderProps) => {
     const safe = <T extends (...args: never[]) => void>(fn: T) =>
       contextSafe ? contextSafe(fn) : fn
     const markReady = safe(() => setReady(true))
-    const markOpened = safe(() => {
-      performance.mark("preloader:opened")
-      setOpened(true)
-    })
+    const markOpened = safe(() => setOpened(true))
     const markDone = safe(() => setDone(true))
 
     // The loader plays on every page load.
@@ -243,7 +240,6 @@ export const Preloader = ({ children }: PreloaderProps) => {
         // Sections were already set up before the exit began (see `leave` below), so
         // nothing heavy runs here.
         .add("open", 2.35)
-        .call(() => performance.mark("preloader:open"), undefined, "open")
         .to(dot, { scale: 0, autoAlpha: 0, duration: 0.2, ease: "power2.in" }, "open")
         .to(hole, { r: 1, duration: 1.2, ease: ease.expo, onUpdate: cut }, "open")
         // The hero starts revealing itself piece by piece as the circle sweeps open.
@@ -274,7 +270,6 @@ export const Preloader = ({ children }: PreloaderProps) => {
     // start the exit only once that work is done (the timeout can't fire until the
     // main thread is free), so the opening itself never stutters.
     const leave = () => {
-      performance.mark("preloader:setup")
       markReady()
       leaveTimer = window.setTimeout(() => {
         leaveFrame = requestAnimationFrame(() => {
@@ -282,7 +277,6 @@ export const Preloader = ({ children }: PreloaderProps) => {
             if (cancelled) return
             // Sections are measured; now zoom the (still hidden) page and leave.
             zoomIn()
-            performance.mark("preloader:exit")
             exit()
           })
         })

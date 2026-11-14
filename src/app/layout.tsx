@@ -2,7 +2,6 @@ import { PageTransitionProvider } from "@/components/animation/page-transition"
 import SmoothScrollProvider from "@/components/animation/smooth-scroll"
 import { Footer } from "@/components/layout/footer"
 import { Navbar } from "@/components/layout/navbar"
-import { PerfProbe } from "@/components/perf-probe"
 import { Preloader } from "@/components/preloader/preloader"
 import { cn } from "@/lib/utils"
 import { fontInstrumentSerif, SIGNATURE_OTF_PUBLIC_URL } from "@/utils/font"
@@ -40,10 +39,7 @@ export default function RootLayout({
             </Preloader>
           </PageTransitionProvider>
         </SmoothScrollProvider>
-        <Toaster richColors position="top-right" />
-        {/* TEMPORARY: slow-frame diagnostics, see components/perf-probe.tsx */}
-        <PerfProbe />
-      </body>
+        <Toaster richColors position="top-right" />      </body>
     </html>
   )
 }
