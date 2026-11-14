@@ -251,39 +251,52 @@ export const setupAboutScroll = ({
     }
   }
 
+  // The first slide shows straight away; the rings draw alongside it rather than first.
   const intro = gsap.timeline({ paused: true })
   if (!skipIntro) {
+    // Scrolling may already have moved past the first slide by the time this fires
+    intro.add(() => showSlide(activeIndex, false, 1), 0)
+    intro.to(wheel, { autoAlpha: 1, duration: 0.45, ease: "power2.out" }, 0)
     if (outerRing) {
-      intro.to(outerRing, {
-        strokeDashoffset: 0,
-        duration: 1.15,
-        ease: "power2.inOut",
-      })
+      intro.to(
+        outerRing,
+        { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut" },
+        0
+      )
     }
     if (innerRing) {
       intro.to(
         innerRing,
-        { strokeDashoffset: 0, duration: 1.05, ease: "power2.inOut" },
-        "<0.1"
+        { strokeDashoffset: 0, duration: 0.85, ease: "power2.inOut" },
+        0.08
       )
     }
     if (needle) {
       intro.to(
         needle,
-        { autoAlpha: 1, duration: 0.4, ease: "power2.out" },
-        "<0.55"
+        { autoAlpha: 1, duration: 0.35, ease: "power2.out" },
+        0.3
       )
     }
-    intro.to(
-      wheel,
-      { autoAlpha: 1, duration: 0.55, ease: "power2.out" },
-      "<0.15"
-    )
-    // Scrolling may already have moved past the first slide by the time this fires
-    intro.add(() => showSlide(activeIndex, false, 1), "<0.08")
   }
 
   let introPlayed = skipIntro
+  const playIntro = () => {
+    if (introPlayed) return
+    introPlayed = true
+    intro.play()
+  }
+
+  // Start while the section is still scrolling in, so it's already showing by
+  // the time it pins.
+  if (!skipIntro) {
+    ScrollTrigger.create({
+      trigger: root,
+      start: "top 55%",
+      once: true,
+      onEnter: playIntro,
+    })
+  }
 
   const tl = gsap.timeline({
     onUpdate: () => {
@@ -295,10 +308,7 @@ export const setupAboutScroll = ({
       scrub,
       onToggle: (self) => {
         wheel.style.willChange = self.isActive ? "transform" : "auto"
-        if (self.isActive && !introPlayed) {
-          introPlayed = true
-          intro.play()
-        }
+        if (self.isActive) playIntro()
       },
     },
   })

@@ -91,6 +91,10 @@ export const aboutSlides: AboutSlide[] = [
         label: "Feb 2024 to May 2025",
         title: "IMML",
         description: "Data Analyst",
+        points: [
+          "Checked data entry for accuracy and consistency.",
+          "Led a team of 10.",
+        ],
       },
     ],
     image: "/images/experience.svg",

@@ -98,8 +98,13 @@ const setContentA11y = (el: HTMLElement, isActive: boolean) => {
 const isHidden = (el: HTMLElement) =>
   Number(gsap.getProperty(el, "opacity")) < 0.02
 
-/** Hidden and staying hidden: a slide still waiting on its enter delay reads as hidden but is about to show. */
-const isSettledHidden = (el: HTMLElement) => isHidden(el) && !gsap.isTweening(el)
+/**
+ * Hidden and staying hidden. A slide still waiting on its enter delay reads as
+ * hidden but is about to show, and gsap.isTweening() misses tweens that haven't
+ * started yet, so check for any queued tween at all.
+ */
+const isSettledHidden = (el: HTMLElement) =>
+  isHidden(el) && gsap.getTweensOf(el).length === 0
 
 const setContentImmediate = (
   el: HTMLElement,
