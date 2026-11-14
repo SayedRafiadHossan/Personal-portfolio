@@ -15,8 +15,7 @@ export const profile = {
   country: "Bangladesh",
   coordinates: "23.8103° N, 90.4125° E",
   timezone: "Asia/Dhaka",
-  /** placeholder */
-  email: "hello@yourname.com",
+  email: "rafiadhossen@gmail.com",
   /**
    * Where you work now: linked in the hero intro, with `preview` shown on hover,
    * and used as the current job in the About section.
@@ -66,25 +65,36 @@ export type AboutSlide = {
 export const aboutSlides: AboutSlide[] = [
   {
     title: "Who I am",
-    description: `Hi — I'm ${profile.name}, a ${profile.role} from ${profile.country}. Write two or three sentences here about what you build, how you work and what you care about.`,
+    description:
+      "I'm a frontend developer. I build websites where design and motion work together: clean layouts, smooth interactions, and pages that guide visitors to take action. Open to Frontend Developer and Framer Developer roles (remote, hybrid or on-site) and freelance projects.",
     image: "/images/about-me.svg",
     imageAlt: "Who I am",
   },
   {
     title: "Experience",
     description:
-      "A one-line summary of the kind of work you ship — products, client sites, open-source tools.",
+      "Marketing websites, Framer templates and WordPress sites, from layout to launch.",
     experience: [
       {
-        label: "2024 to Present",
+        label: "Present",
         title: profile.company.name,
         href: profile.company.href,
         description: profile.role,
         current: true,
+        // Kept short: the slide has to fit a 768px-tall laptop screen.
         points: [
-          "Placeholder — what you built or shipped here, with numbers if you have them.",
-          "Placeholder — a project or responsibility you're proud of.",
-          "Placeholder — tools and techniques you used.",
+          "Marketing websites and Framer templates for SaaS, AI, fintech, e-commerce and architecture brands.",
+          "WordPress sites for clients.",
+        ],
+      },
+      {
+        label: "Present",
+        title: "Pixels71",
+        href: "https://pixels71.com/",
+        description: "Framer template creator",
+        current: true,
+        points: [
+          "Framer templates with motion built in. Optivio, Orveli and QEVRØN trended on the Framer Marketplace.",
         ],
       },
     ],
@@ -94,17 +104,21 @@ export const aboutSlides: AboutSlide[] = [
   {
     title: "Skills",
     description:
-      "One sentence about your toolbox — the stack you're strongest in and how you use it.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Node.js"],
+      "The tools I use to take a design from first layout to a smooth, responsive page.",
+    tags: ["Framer", "WordPress", "React", "JavaScript", "HTML", "CSS"],
     image: "/images/frontend.svg",
     imageAlt: "Skills",
   },
   {
-    title: "What I'm learning",
-    description: "What you're exploring or getting better at right now.",
-    tags: ["Topic one", "Topic two", "Topic three"],
+    title: "What I care about",
+    description: "The principles behind every page I build.",
+    tags: [
+      "Layouts built around how visitors make decisions",
+      "Motion that feels smooth, not distracting",
+      "Pages that look sharp on every device",
+    ],
     image: "/images/learning.svg",
-    imageAlt: "What I'm learning",
+    imageAlt: "What I care about",
   },
 ]
 
