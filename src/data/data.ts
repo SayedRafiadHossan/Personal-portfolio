@@ -212,15 +212,15 @@ export const featuredWorks: FeaturedWork[] = [
     stack: ["Framer", "Next.js", "CMS"],
   },
   {
-    title: "Project Four",
+    title: "Rivor",
     description:
-      "A one- or two-sentence pitch: what the project is and who it's for.",
-    href: "#",
-    image: "/images/project-4.jpg",
-    imageAlt: "Project Four",
+      "A multipurpose creative WordPress theme for agencies, studios and portfolios, sold on ThemeForest.",
+    href: "https://preview.themeforest.net/item/rivor-multipurpose-creative-wordpress-theme/full_screen_preview/59373721",
+    image: "/images/rivor.jpg",
+    imageAlt: "Rivor",
     kind: "team",
-    role: "What you did on it.",
-    stack: ["HTML", "CSS", "JavaScript"],
+    role: "Built with the team at StaticMania.",
+    stack: ["WordPress", "PHP", "JavaScript"],
   },
   {
     title: "Project Five",
